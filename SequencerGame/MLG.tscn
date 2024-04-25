@@ -1,0 +1,201 @@
+[gd_scene load_steps=25 format=3 uid="uid://dgryicjstak0o"]
+
+[ext_resource type="Script" path="res://WKey.gd" id="1_dt03s"]
+[ext_resource type="Shader" path="res://spiral.gdshader" id="1_kqqn3"]
+[ext_resource type="AudioStream" uid="uid://bj3lsl3ai8uni" path="res://Audio/somebody-plllzzzzzzz.mp3" id="2_jbmny"]
+[ext_resource type="Script" path="res://Scripts/AudioStreamPlayer.gd" id="3_x7fws"]
+[ext_resource type="AudioStream" uid="uid://dlt88urpmomue" path="res://Audio/12g-pumpfull.mp3" id="4_7thrl"]
+[ext_resource type="Script" path="res://Scripts/SFX 2.gd" id="5_4n3w6"]
+[ext_resource type="AudioStream" uid="uid://dt3k52tfvl68o" path="res://Audio/now-give-em-hell.mp3" id="6_omiot"]
+[ext_resource type="Script" path="res://Scripts/SFX 3.gd" id="7_0rf8m"]
+[ext_resource type="Script" path="res://Scripts/SFX 4.gd" id="8_owwvy"]
+[ext_resource type="AudioStream" uid="uid://dmo58e5d3f3wj" path="res://Audio/m4a1_single-kibblesbob-8540445.mp3" id="8_ytiyf"]
+[ext_resource type="AudioStream" uid="uid://hlmy0kqxppb2" path="res://Audio/le-castle-vania-john-wick-medley-audiotrimmer.mp3" id="9_7rrpb"]
+[ext_resource type="AudioStream" uid="uid://t13tltuf8nmj" path="res://Audio/rise-and-hits-198226.mp3" id="10_ejee7"]
+[ext_resource type="Script" path="res://Scripts/Sound1.gd" id="10_owbfl"]
+[ext_resource type="Script" path="res://SFX 5.gd" id="11_4jceo"]
+[ext_resource type="AudioStream" uid="uid://c7jqhj6h8v1ld" path="res://Resources/gunshots-mixed.mp3" id="11_ih520"]
+[ext_resource type="AudioStream" uid="uid://d3irwjls6keqh" path="res://Audio/call-the-police-18554.mp3" id="12_as0y6"]
+[ext_resource type="Script" path="res://Scripts/Sound Manager 2.gd" id="12_e1mw1"]
+[ext_resource type="AudioStream" uid="uid://cjm0wf74fn7q1" path="res://Audio/epic-braam-1-171527.mp3" id="12_x0bod"]
+[ext_resource type="Script" path="res://SFX 6.gd" id="13_41du6"]
+[ext_resource type="AudioStream" uid="uid://b14rqaf5l3dj8" path="res://Audio/le-castle-vania-red-circle-led-spirals-shots-firedv1.mp3" id="14_2n00i"]
+[ext_resource type="Script" path="res://Scripts/Sound3.gd" id="14_7moei"]
+[ext_resource type="Script" path="res://Scripts/Sound4.gd" id="15_duy4q"]
+[ext_resource type="AudioStream" uid="uid://dhma6p4imwpnu" path="res://Audio/cinematic-drums-146028.mp3" id="16_kiwb7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wa7vv"]
+shader = ExtResource("1_kqqn3")
+shader_parameter/resoultion = Vector2(600, 400)
+shader_parameter/spiral_color = Color(0.2, 0.6, 0.3, 1)
+shader_parameter/frequency = 8.0
+shader_parameter/speed = 8.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_wa7vv")
+offset_left = -712.0
+offset_top = -368.0
+offset_right = -672.0
+offset_bottom = -328.0
+scale = Vector2(66.5293, 36.2998)
+
+[node name="BoxContainer" type="BoxContainer" parent="ColorRect"]
+offset_left = 7.93636
+offset_top = 7.71353
+offset_right = 47.9364
+offset_bottom = 63.7135
+scale = Vector2(0.189184, 0.434718)
+vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/BoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="ColorRect/BoxContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 10.0
+step = 0.001
+value = 1.0
+
+[node name="HSlider2" type="HSlider" parent="ColorRect/BoxContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+
+[node name="HSlider3" type="HSlider" parent="ColorRect/BoxContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+
+[node name="BoxContainer2" type="BoxContainer" parent="."]
+offset_left = 416.0
+offset_top = -80.0
+offset_right = 503.0
+offset_bottom = 126.0
+scale = Vector2(6.29585, 4.36791)
+vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Get HIM"
+script = ExtResource("1_dt03s")
+
+[node name="SFX 1" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button"]
+stream = ExtResource("2_jbmny")
+script = ExtResource("3_x7fws")
+
+[node name="Button2" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Reload"
+
+[node name="SFX 2" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button2"]
+stream = ExtResource("4_7thrl")
+script = ExtResource("5_4n3w6")
+
+[node name="Button3" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "BAIN"
+
+[node name="SFX 3" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button3"]
+stream = ExtResource("6_omiot")
+script = ExtResource("7_0rf8m")
+
+[node name="Button4" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "GUNSHOT"
+
+[node name="SFX 4" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button4"]
+stream = ExtResource("8_ytiyf")
+script = ExtResource("8_owwvy")
+
+[node name="Variation 1" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button4"]
+stream = ExtResource("11_ih520")
+
+[node name="Button5" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Slowfade"
+
+[node name="SFX 5" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button5"]
+stream = ExtResource("10_ejee7")
+script = ExtResource("11_4jceo")
+
+[node name="Button6" type="Button" parent="BoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Fade"
+
+[node name="SFX 6" type="AudioStreamPlayer" parent="BoxContainer2/VBoxContainer/Button6"]
+stream = ExtResource("12_x0bod")
+script = ExtResource("13_41du6")
+
+[node name="BoxContainer3" type="BoxContainer" parent="."]
+offset_left = 1056.0
+offset_top = -80.0
+offset_right = 1100.0
+offset_bottom = 28.0
+scale = Vector2(7.5703, 8.24879)
+vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="BoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sound Manager 1" type="AudioStreamPlayer" parent="BoxContainer3/VBoxContainer/CheckButton"]
+stream = ExtResource("9_7rrpb")
+script = ExtResource("10_owbfl")
+
+[node name="CheckButton2" type="CheckButton" parent="BoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sound Manager 2" type="AudioStreamPlayer" parent="BoxContainer3/VBoxContainer/CheckButton2"]
+stream = ExtResource("12_as0y6")
+script = ExtResource("12_e1mw1")
+
+[node name="CheckButton3" type="CheckButton" parent="BoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sound Manager 3" type="AudioStreamPlayer" parent="BoxContainer3/VBoxContainer/CheckButton3"]
+stream = ExtResource("14_2n00i")
+script = ExtResource("14_7moei")
+
+[node name="CheckButton4" type="CheckButton" parent="BoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sound Manager 4" type="AudioStreamPlayer" parent="BoxContainer3/VBoxContainer/CheckButton4"]
+stream = ExtResource("16_kiwb7")
+script = ExtResource("15_duy4q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(608, 368)
+scale = Vector2(240.015, 17.5997)
+
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider" to="BoxContainer3/VBoxContainer/CheckButton/Sound Manager 1" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider" to="BoxContainer3/VBoxContainer/CheckButton2/Sound Manager 2" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider" to="BoxContainer3/VBoxContainer/CheckButton3/Sound Manager 3" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider" to="BoxContainer3/VBoxContainer/CheckButton4/Sound Manager 4" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider2" to="BoxContainer3/VBoxContainer/CheckButton/Sound Manager 1" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider2" to="BoxContainer3/VBoxContainer/CheckButton2/Sound Manager 2" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider2" to="BoxContainer3/VBoxContainer/CheckButton3/Sound Manager 3" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider2" to="BoxContainer3/VBoxContainer/CheckButton4/Sound Manager 4" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider3" to="BoxContainer2/VBoxContainer/Button/SFX 1" method="_on_h_slider_3_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider3" to="BoxContainer2/VBoxContainer/Button2/SFX 2" method="_on_h_slider_3_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider3" to="BoxContainer2/VBoxContainer/Button3/SFX 3" method="_on_h_slider_3_value_changed"]
+[connection signal="value_changed" from="ColorRect/BoxContainer/VBoxContainer/HSlider3" to="BoxContainer2/VBoxContainer/Button4/SFX 4" method="_on_h_slider_3_value_changed"]
+[connection signal="button_down" from="BoxContainer2/VBoxContainer/Button" to="BoxContainer2/VBoxContainer/Button/SFX 1" method="_on_button_button_down"]
+[connection signal="pressed" from="BoxContainer2/VBoxContainer/Button2" to="BoxContainer2/VBoxContainer/Button2/SFX 2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="BoxContainer2/VBoxContainer/Button3" to="BoxContainer2/VBoxContainer/Button3/SFX 3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="BoxContainer2/VBoxContainer/Button4" to="BoxContainer2/VBoxContainer/Button4/SFX 4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="BoxContainer2/VBoxContainer/Button5" to="BoxContainer2/VBoxContainer/Button5/SFX 5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="BoxContainer2/VBoxContainer/Button6" to="BoxContainer2/VBoxContainer/Button6/SFX 6" method="_on_button_6_pressed"]
+[connection signal="toggled" from="BoxContainer3/VBoxContainer/CheckButton" to="BoxContainer3/VBoxContainer/CheckButton/Sound Manager 1" method="_on_check_button_toggled"]
+[connection signal="toggled" from="BoxContainer3/VBoxContainer/CheckButton2" to="BoxContainer3/VBoxContainer/CheckButton2/Sound Manager 2" method="_on_check_button_2_toggled"]
+[connection signal="toggled" from="BoxContainer3/VBoxContainer/CheckButton3" to="BoxContainer3/VBoxContainer/CheckButton3/Sound Manager 3" method="_on_check_button_3_toggled"]
+[connection signal="toggled" from="BoxContainer3/VBoxContainer/CheckButton4" to="BoxContainer3/VBoxContainer/CheckButton4/Sound Manager 4" method="_on_check_button_3_toggled"]

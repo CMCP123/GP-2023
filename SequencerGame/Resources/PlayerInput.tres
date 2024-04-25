@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="PlayerInput" load_steps=6 format=3 uid="uid://chnarnsprwiqq"]
+
+[ext_resource type="Script" path="res://Resources/PlayerInput.gd" id="1_15byk"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_u07ij"]
+device = -1
+keycode = 87
+unicode = 119
+
+[sub_resource type="InputEventKey" id="InputEventKey_sjpmj"]
+device = -1
+keycode = 68
+unicode = 100
+
+[sub_resource type="InputEventKey" id="InputEventKey_42cna"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventKey" id="InputEventKey_o1kw0"]
+device = -1
+keycode = 83
+unicode = 115
+
+[resource]
+script = ExtResource("1_15byk")
+first_button_key = SubResource("InputEventKey_u07ij")
+second_button_key = SubResource("InputEventKey_42cna")
+third_button_key = SubResource("InputEventKey_o1kw0")
+fourth_button_key = SubResource("InputEventKey_sjpmj")
