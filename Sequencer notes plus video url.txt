@@ -1,0 +1,19 @@
+Sequencer:
+
+I wanted to create an application that focused on action music, like in john wick.
+
+
+In the movie, one of the songs is called "LED spirals", so I created a spiral shader to add a super cool feel.
+
+I added 4 looping tracks that are toggled on and off.
+
+I added 6 different sound effects. They can be used to transition between songs or be used for adding atmosphere.
+
+I created 3 sliders, master volume, 2 pitch scales, one for the looping sounds, one for the SFX.
+
+The idea is just like a fun techno DJ toy anyone who is a fan of the genre or the John Wick films.
+
+Here is the url for the Youtube video
+
+https://youtu.be/102FVKIMVGc 
+
